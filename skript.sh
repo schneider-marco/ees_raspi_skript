@@ -57,6 +57,7 @@ sudo systemctl start autossh
 
 echo "Der autossh systemd service wurde erstellt und aktiviert."
 
+mkdir .ssh
 # Erstellen eines SSH-Schlüssels ohne Passphrase im Ordner ~/.ssh/ des aktuellen Benutzers
 echo "Erstelle SSH-Schlüssel ohne Passphrase im Ordner ${user_home}/.ssh/..."
 ssh-keygen -t rsa -b 4096 -f ${user_home}/.ssh/rmm -N "" -q
