@@ -40,7 +40,7 @@ After=network-online.target
 [Service]
 User=root
 Environment=AUTOSSH_GATETIME=0
-ExecStart=/usr/bin/autossh -M 0 -q -N -o "StrictHostKeyChecking=no" -o "PubKeyAuthentication=yes" -o "PasswordAuthentication=no" -o "ExitOnForwardFailure=yes" -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -i ${user_home}/.ssh/rmm -R ${ssh_port}:localhost:22 -l rmmuser rmm.masc-lab.de
+ExecStart=/usr/bin/autossh -M 0 -q -N -o "StrictHostKeyChecking=no" -o "PubKeyAuthentication=yes" -o "PasswordAuthentication=no" -o "ExitOnForwardFailure=yes" -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -i ${user_home}/.ssh/rmm -R ${ssh_port}:localhost:22 -l eos ees202.e-technik.uni-erlangen.de -p 2222
 ExecStop=/usr/bin/killall autossh
 RestartSec=5
 Restart=always
